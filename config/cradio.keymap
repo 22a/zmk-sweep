@@ -57,7 +57,7 @@
             &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ - _      | = +      | [ {      | ' "      | ` ~      |   | Left     | Down     | Up       | Right    | \ |      │
-            &kp MINUS  &kp EQUAL  &kp LBKT   &kp SQT    &GRAVE         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp BSLH
+            &kp MINUS  HRML(EQUAL, LBKT,     SQT)       &GRAVE         &kp LARW   HRMR(DARW, UARW,      RARW)      &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          |          | ] }      |          |          |   |          |          |          |          |          │
             &trans     &trans     &kp RBKT   &trans     &trans         &trans     &trans     &trans     &trans     &trans
