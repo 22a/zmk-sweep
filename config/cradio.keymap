@@ -9,7 +9,7 @@
 #define HRML(k1,k2,k3) &ht LALT k1  &ht LCTRL k2  &ht LGUI k3
 // Home row mods right macro
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
-// Home row mods macro
+// Bluetooth profile selection macro
 #define BT_PRO(n) &bt BT_SEL n
 
 / {
@@ -99,13 +99,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │PROFILE 0 │   │          │          │          │          │          │
-          &bootloader &bt BT_CLR  &trans     &trans    &BT_PRO(0)     &trans     &trans     &trans     &trans    &bootloader
+          &bootloader &bt BT_CLR  &trans     &trans     BT_PRO(0)     &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │PROFILE 1 │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans    &BT_PRO(1)     &trans     &trans     &trans     &trans    &trans
+            &trans     &trans     &trans     &trans     BT_PRO(1)     &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans    &BT_PRO(2)     &trans     &trans     &trans     &trans    &trans
+            &trans     &trans     &trans     &trans     BT_PRO(2)     &trans     &trans     &trans     &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
