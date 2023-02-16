@@ -25,11 +25,11 @@
             global-quick-tap;
         };
 
-        tui: tap_unless_interrupted {
-            label = "tap_unless_interrupted";
+        hp: hold_preferred {
+            label = "hold_preferred";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -58,7 +58,7 @@
         //│ Z        │ X        │ C        │ V        │ B        │   │ N        │ M        │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &lt 2 TAB  &lt 1 ESC      &tui LSHFT SPACE      &kp ENTER
+                                             &lt 2 TAB  &lt 1 ESC      &hp LSHFT SPACE      &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰─────────────────────┴──────────╯
             >;
         };
@@ -75,7 +75,7 @@
         //│          |          | ] }      |          |          |   |          |          |          |          |          │
             &trans     &trans     &kp RBKT   &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┴──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &tui LSHFT BSPC       &kp DEL
+                                             &trans     &trans         &hp LSHFT BSPC       &kp DEL
         //                                 ╰──────────┴──────────╯   ╰─────────────────────┴──────────╯
             >;
         };
