@@ -36,6 +36,17 @@
         };
     };
 
+    macros {
+        ZMK_MACRO(euro,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                        , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>
+                        , <&macro_release &kp LALT>
+                        ;
+        )
+    }
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -87,10 +98,10 @@
             &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CapsWord | Å        | Ä        | Ö        | €        |   |          |          |          |          | F11      │
-            &caps_word &trans     &trans     &trans     &trans         &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp F11
+            &caps_word &trans     &trans     &trans     &euro         &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp F11
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CapsLock |          |          |          |          |   |          |          |          |          | F12      │
-            &kp CAPS   &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &kp F12
+        //│ CapsLock |          |          |          |          |   | HOME     | PAGE UP  | PAGE UP  | END      | F12      │
+            &kp CAPS   &trans     &trans     &trans     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp F12
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┴──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &kp C_PLAY_PAUSE       &trans
         //                                 ╰──────────┴──────────╯   ╰─────────────────────┴──────────╯
