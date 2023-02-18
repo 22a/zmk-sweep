@@ -45,7 +45,7 @@
                         , <&macro_release &kp LALT>
                         ;
         )
-    }
+    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
